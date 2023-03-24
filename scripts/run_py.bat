@@ -1,5 +1,5 @@
 @REM $ this_bat_path py_path
-call %userprofile%\anaconda3\Scripts\activate.bat notion2qa
+call %userprofile%\anaconda3\Scripts\activate.bat notion2quizpdf
 python %1
 echo --------------------------------------------------------------------
 echo The program execution completed.
