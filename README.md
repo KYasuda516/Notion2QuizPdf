@@ -13,7 +13,7 @@ Notionの記事を問題集のようにしたPDFを作ることができます�
 3. 保存したHTML（問題用・答え用）をそれぞれPDFとして書き出し。
 4. 2種類のPDFが見開き1ページになる（各ページが左右に並ぶ）ように編集し、1つのファイルとして保存。
 
-なお、これらは4つのバッチファイル `Step1 - notion2html.bat` ～ `Step4 - combine_pdfs.bat` それぞれが実行する内容に対応しています。
+なお、これらは4つのバッチファイル `/Step1 - notion2html.bat` ～ `/Step4 - combine_pdfs.bat` それぞれが実行する内容に対応しています。
 
 
 # 注意
@@ -27,7 +27,7 @@ Notionの記事を問題集のようにしたPDFを作ることができます�
 その他、いくつか注意点があります。
 
 * Step1ではNotionへのログインを行いますが、ここではGoogleアカウントによるログインとなっています。  
-現在Notionでは他に「Appleアカウントによるログイン」「メールアドレスによるログイン」がサポートされていますが、これらのログイン方法を用いる場合は `notion2html.py` を少し書き直していただく必要があります。
+現在Notionでは他に「Appleアカウントによるログイン」「メールアドレスによるログイン」がサポートされていますが、これらのログイン方法を用いる場合は `/scripts/notion2html.py` を少し書き直していただく必要があります。
 * Notion記事中のあるブロックが、問い部分、答え部分をもつ「一問一答ブロック」として認識され、答え部分にマスクが適用されるには、そのブロックが一定のフォーマットに従っている必要があります。（詳細は次段へ）
 * Notion記事のURLが記載された `/setting.csv` を用意する必要があります。（詳細は次段へ）
 
@@ -63,19 +63,19 @@ conda env create -f ./scripts/environment.yml
 以上が制約の説明となります。これをふまえると、たとえば次のようなトグルブロックがあった場合、下線で示す部分がマスクされます。
 <ul>
 <details>
-<summary style="list-style-position: outside;">静脈, 葉脈は英語で&nbsp;&nbsp;&emsp;<u>vane　　※ vane (風向計, 羽根) と同じ読み</u></summary>
+<summary style="list-style-position: outside;">静脈, 葉脈は英語で&nbsp;&nbsp;&emsp;<ins>vane　　※ vane (風向計, 羽根) と同じ読み</ins></summary>
 </details>
 <details>
-<summary style="list-style-position: outside;">ボイラープレート&emsp;&emsp;<u>ほとんどまたは全く変化することなく複数の場所で繰り返される</u>
-     <br>コードとは&emsp;&emsp;&emsp;&emsp;&emsp;<u>定型コードのセクション</u></summary>
+<summary style="list-style-position: outside;">ボイラープレート&emsp;&emsp;<ins>ほとんどまたは全く変化することなく複数の場所で繰り返される</ins>
+     <br>コードとは&emsp;&emsp;&emsp;&emsp;&emsp;<ins>定型コードのセクション</ins></summary>
 </details>
 <details>
-<summary style="list-style-position: outside;">シャドーイングとは&emsp;<u>既存のものと同名の変数や関数を定義して、</u>
-     <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<u>そのスコープで既存の変数や関数にアクセスできなくする機能</u></summary>
+<summary style="list-style-position: outside;">シャドーイングとは&emsp;<ins>既存のものと同名の変数や関数を定義して、</ins>
+     <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<ins>そのスコープで既存の変数や関数にアクセスできなくする機能</ins></summary>
 </details>
 </ul>
 
-## setting.csv の作成
+## `/setting.csv` の作成
 `/setting.csv` というCSVファイルを作成し、内容を次のようなものにしてください（**文字コードは `UTF-8`** ）。
 
 | name | url | active |
@@ -100,14 +100,15 @@ conda env create -f ./scripts/environment.yml
 [準備](#準備 "準備")は必ず済ませておいてください。
 
 [流れ](#流れ "流れ")で説明したステップをそれぞれ実行する場合、次の名前のバッチファイルを実行してください。（エクスプローラでのダブルクリックで実行できます）
-* `Step1 - notion2html.bat`
-* `Step2 - reform_html.bat`
-* `Step3 - html2pdf.bat`
-* `Step4 - combine_pdfs.bat`
+* `/Step1 - notion2html.bat`
+* `/Step2 - reform_html.bat`
+* `/Step3 - html2pdf.bat`
+* `/Step4 - combine_pdfs.bat`
 
 反対に、4つのステップを一気に実行したい場合は、次の名前のバッチファイルを実行してください。
-* `OneStop - do_all_at_once.bat`
+* `/OneStop - do_all_at_once.bat`
 
+Step4まで終えてできる最終的なPDFは `/pdf/combined/` に保存されます。
 
 # 作成者
 
