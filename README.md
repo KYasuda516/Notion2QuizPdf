@@ -4,7 +4,7 @@ Notionの記事を問題集のようにしたPDFを作ることができます�
 
 「一問一答」形式のNotion記事を用意すれば、答え部分がマスクされたPDFを作ることができます。また、見開き右側に、マスクされていない元の状態のものが一緒になっているので、答え合わせもしやすいです。
 
-できあがるPDFの例が [quiz-pdf](https://github.com/kyasuda516/quiz-pdf "kyasuda516/quiz-pdf: Notion2QuizPdfで作られたPDF集") にありますので、そちらもご参照ください。
+できあがるPDFの例が[QuizPdf](https://github.com/kyasuda516/quiz-pdf "kyasuda516/quiz-pdf: Notion2QuizPdfで作られたPDF集")にありますので、そちらもご参照ください。
 
 # 流れ
 
