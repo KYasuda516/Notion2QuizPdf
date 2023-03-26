@@ -2,7 +2,7 @@
 @REM This software is released under the MIT License, see LICENSE.
 
 @REM $ this_bat_path py_path
-call %userprofile%\anaconda3\Scripts\activate.bat notion2quizpdf
+call %userprofile%\anaconda3\Scripts\activate.bat notion2quiz-pdf-env
 python %1
 echo --------------------------------------------------------------------
 echo The program execution completed.
