@@ -1,3 +1,6 @@
+# Copyright (c) 2023 Kanta Yasuda (GitHub: @kyasuda516)
+# This software is released under the MIT License, see LICENSE.
+
 from mylib.io import yes_no_input
 from multiprocessing import freeze_support
 import notion2html

@@ -1,3 +1,6 @@
+@REM Copyright (c) 2023 Kanta Yasuda (GitHub: @kyasuda516)
+@REM This software is released under the MIT License, see LICENSE.
+
 @REM $ this_bat_path py_path
 call %userprofile%\anaconda3\Scripts\activate.bat notion2quizpdf
 python %1
