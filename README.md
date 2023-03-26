@@ -1,4 +1,4 @@
-# Notion2QuizPDF
+# Notion2QuizPdf
 
 Notionの記事を問題集のようにしたPDFを作ることができます。
 
