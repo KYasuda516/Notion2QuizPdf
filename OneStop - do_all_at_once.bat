@@ -2,4 +2,4 @@
 @REM This software is released under the MIT License, see LICENSE.
 
 @echo off
-%~dp0\scripts\run_py.bat %~dp0\scripts\do_all_at_once.py
+%~dp0\.scripts\run_py.bat %~dp0\.scripts\do_all_at_once.py
