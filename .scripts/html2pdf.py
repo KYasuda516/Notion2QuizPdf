@@ -1,7 +1,7 @@
 # Copyright (c) 2023 Kanta Yasuda (GitHub: @kyasuda516)
 # This software is released under the MIT License, see LICENSE.
 
-from mylib import logging
+# from mylib import logging
 from mylib.io import yes_no_input
 from mylib.path import TempDirPath
 # !conda install -c conda-forge selenium
@@ -45,7 +45,7 @@ class Printer():
     # オプション設定
     options = webdriver.chrome.options.Options()
     # 不要な警告を非表示に
-    options.add_experimental_option('excludeSwitches', ['enable-logging'])
+    # options.add_experimental_option('excludeSwitches', ['enable-logging'])
     # 最大化された画面に
     options.add_argument('--start-maximized')
     # 印刷をPDFで(https://degitalization.hatenablog.jp/entry/2021/03/13/102805)
@@ -83,14 +83,14 @@ class Printer():
     self.__browser.execute_script('window.print();')
     # 待機
     time.sleep(3)   # 2秒だとけっこうギリギリ
-    logging.info(f'Downloaded {html_path.name}')
+    # logging.info(f'Downloaded {html_path.name}')
 
   def __del__(self):
     """ブラウザーを閉じる"""
     
     self.__browser.close()  # アクティブなタブのみ終了。
     self.__browser.quit()   # すべてのタブを閉じてブラウザを終了。（ないとダメだ！）
-    logging.info('Closed browser')
+    # logging.info('Closed browser')
 
 def main():
   # 対象のHTMLファイルのパスのリスト
@@ -101,7 +101,7 @@ def main():
     src_a = HTMLDIR / f'{title}{mymodule.POSTFIXES.a}.html'
     # もととなるHTMLファイルが実際に存在していなければ、ログに書いたうえでスキップ
     if not all([src_q.exists(), src_a.exists()]):
-      logging.info(f'Missed the file "{src_q.name}" or "{src_a.name}"')
+      # logging.info(f'Missed the file "{src_q.name}" or "{src_a.name}"')
       continue
     srcs.append(src_q)
     srcs.append(src_a)

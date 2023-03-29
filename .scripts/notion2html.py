@@ -1,7 +1,7 @@
 # Copyright (c) 2023 Kanta Yasuda (GitHub: @kyasuda516)
 # This software is released under the MIT License, see LICENSE.
 
-from mylib import logging
+# from mylib import logging
 from mylib.io import yes_no_input
 from mylib.path import TempDirPath
 import mylib.subproc
@@ -182,12 +182,12 @@ class NotionHtmlDownloader():
         continue
       
       # ログ書いて終わる
-      logging.info(f'Downloaded {title}.html')
+      # logging.info(f'Downloaded {title}.html')
       return
     
     else:
       # 失敗のログを書いて終わる
-      logging.info(f'Failed to download {title}.html')
+      # logging.info(f'Failed to download {title}.html')
       return
 
   def __wait_until_completing(self, timeout_second: float) -> None:
@@ -250,7 +250,7 @@ class NotionHtmlDownloader():
     # 一時ブラウザを終了
     browser.quit()
 
-    logging.info('Recovered Chrome')
+    # logging.info('Recovered Chrome')
 
   def __del__(self):
     """一時フォルダを削除し、ブラウザーを閉じる"""
@@ -260,7 +260,7 @@ class NotionHtmlDownloader():
     self.__browser.close()  # アクティブなタブのみ終了。
     self.__browser.quit()   # すべてのタブを閉じてブラウザを終了。（ないとダメだ！）
 
-    logging.info('Closed browser')
+    # logging.info('Closed browser')
 
 def main():
   # URLの取得
@@ -269,7 +269,7 @@ def main():
   # 各NotionページのHTMLをダウンロード
   EXPDIR = mymodule.APPDIR / 'html/src'
   loader = NotionHtmlDownloader(EXPDIR)
-  logging.info('Browser Open')
+  # logging.info('Browser Open')
   bar = tqdm(list(urls.items()))
   bar.set_description('Downloading Notion Article')
   try:

@@ -1,7 +1,7 @@
 # Copyright (c) 2023 Kanta Yasuda (GitHub: @kyasuda516)
 # This software is released under the MIT License, see LICENSE.
 
-from mylib import logging
+# from mylib import logging
 from bs4 import BeautifulSoup
 import mymodule
 from pathlib import Path
@@ -161,7 +161,7 @@ class NotionHtmlEditer():
     
     for n in range(invalid_summs.qsize()):
       summ = invalid_summs.get()
-      logging.warning(f'{self.nhfile.title} にて不適切なトグル: {summ.group(0)}')
+      # logging.warning(f'{self.nhfile.title} にて不適切なトグル: {summ.group(0)}')
 
     return f'<html>{head}{body}</html>'
 
@@ -180,7 +180,7 @@ def main():
     src = SRCDIR / f'{title}.html'
     # もととなるHTMLファイルが実際に存在していなければ、ログに書いたうえでスキップ
     if not src.exists():
-      logging.info(f'Missed the file "{src.name}"')
+      # logging.info(f'Missed the file "{src.name}"')
       continue
     exp_q = EXPDIR / f'{title}{mymodule.POSTFIXES.q}.html'
     exp_a = EXPDIR / f'{title}{mymodule.POSTFIXES.a}.html'
@@ -192,12 +192,12 @@ def main():
     # 問いとなるHTMLを作成
     with open(nhfile.exp_q, 'w', encoding='utf-8') as f:
       f.write(editer.problem_html)
-    logging.info(f'Exported {nhfile.exp_q.stem}')
+    # logging.info(f'Exported {nhfile.exp_q.stem}')
     bar.update(1)
     # 答えとなるHTMLを作成
     with open(nhfile.exp_a, 'w', encoding='utf-8') as f:
       f.write(editer.basic_html)
-    logging.info(f'Exported {nhfile.exp_a.stem}')
+    # logging.info(f'Exported {nhfile.exp_a.stem}')
     bar.update(1)
 
 if __name__ == '__main__':

@@ -1,7 +1,7 @@
 # Copyright (c) 2023 Kanta Yasuda (GitHub: @kyasuda516)
 # This software is released under the MIT License, see LICENSE.
 
-from mylib import logging
+# from mylib import logging
 import mymodule
 # !conda install -c conda-forge pypdf2
 import PyPDF2
@@ -59,7 +59,7 @@ def pdf2to1(npfile: NotionPdfFile):
   # ファイルに出力
   with open(npfile.exp.as_posix(), mode="wb") as f:
     out_writer.write(f)
-  logging.info(f'Export {npfile.title}')
+  # logging.info(f'Export {npfile.title}')
 
 def main():
   # 対象の記事のNotionPdfFileのリストを取得
@@ -71,7 +71,7 @@ def main():
     src_a = SRCDIR / f'{title}{mymodule.POSTFIXES.a}.pdf'
     # もととなるPDFが実際に存在していなければ、ログに書いたうえでスキップ
     if not all([src_q.exists(), src_a.exists()]):
-      logging.info(f'"{src_q.name}" or "{src_a.name}" do not exist.')
+      # logging.info(f'"{src_q.name}" or "{src_a.name}" do not exist.')
       continue
     exp = EXPDIR / f'{title}.pdf'
     # リストに追加
