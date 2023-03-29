@@ -11,8 +11,8 @@ dependencies:
   - pip=23.0.1
   - anaconda::beautifulsoup4=4.11.1
   - anaconda::tqdm=4.64.1
-  - conda-forge::selenium=4.8.2=pyhd8ed1ab_0
+  - conda-forge::selenium=4.8.2
   - conda-forge::python-chromedriver-binary<=111.0.5563.111
-  - conda-forge::pypdf2=2.11.1
+  - conda-forge::pypdf2=2.10.5
   - pip:
       - git+https://github.com/KYasuda516/python-mylib.git
