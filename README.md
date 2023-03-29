@@ -40,10 +40,12 @@ Anaconda と Google Chrome をあらかじめインストールしておいて�
 （それらのインストール方法は他のサイトを参照してください）
 
 Anaconda Prompt を起動してください。  
-このリポジトリをクローンしたディレクトリに移動したあと、以下のコマンドを実行してください。（ `notion2quiz-pdf-env` というconda環境が作成されます）
+このリポジトリをクローンしたディレクトリに移動したあと、以下のコマンドを順に実行してください。（ `notion2quiz-pdf-env` というconda環境が作成されます）
 
 ```bash
 conda env create -f ./.scripts/environment.yml
+conda ativate notion2quiz-pdf-env
+conda update --all
 ```
 
 
