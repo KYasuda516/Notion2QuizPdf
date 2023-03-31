@@ -8,7 +8,7 @@ Notionの記事を問題集のようにしたPDFを作ることができます�
 
 # デモ動画
 
-Notion2QuizPdfをデモンストレーションしている様子が下の動画です（サムネイルをクリックするとYouTubeに飛びます）。
+Notion2QuizPdfをデモンストレーションしている様子がこちらです（サムネイルをクリックするとYouTubeに飛びます）。
 
 [!['デモ動画'](https://user-images.githubusercontent.com/127583471/229123827-0a8bdc8e-c479-44fe-93ab-56effe928c6e.PNG)](https://www.youtube.com/watch?v=ORBx_WCSRZ0)
 
