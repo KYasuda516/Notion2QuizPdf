@@ -44,7 +44,7 @@ Anaconda Prompt を起動してください。
 
 ```bash
 conda env create -f ./.scripts/environment.yml
-conda ativate notion2quiz-pdf-env
+conda activate notion2quiz-pdf-env
 conda update --all
 ```
 
